@@ -1,0 +1,21 @@
+.navbar {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 0;
+
+  > .container {
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: $lg) {
+  .navbar.fixed-bottom {
+    padding-left: $sidebar-width;
+  }
+}

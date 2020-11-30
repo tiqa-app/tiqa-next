@@ -1,0 +1,62 @@
+$grid-width-values: (
+  1: 8.3333333333%,
+  4: 33.3333333333%,
+  6: 50%,
+  7: 58.3333333333%,
+  8: 66.6666666667%,
+);
+
+$col-values: (4, 7, 8);
+$offset-values: (1);
+
+.container {
+  width: 100%;
+  padding-right: calc(#{$gutter-x} / 2);
+  padding-left: calc(#{$gutter-x} / 2);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media screen and (min-width: $lg) {
+  .container {
+    padding-right: calc(#{$gutter-x});
+    padding-left: calc(#{$gutter-x});
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: calc(#{$gutter-x} / -2);
+  margin-left: calc(#{$gutter-x} / -2);
+
+  > * {
+    width: 100%;
+    max-width: 100%;
+    padding-right: calc(#{$gutter-x} / 2);
+    padding-left: calc(#{$gutter-x} / 2);
+  }
+}
+
+.col {
+  flex: 1 0 0%;
+}
+
+@media screen and (min-width: $xl) {
+  @each $value in $col-values {
+    .col-#{$value} {
+      flex: 0 0 auto;
+      width: map-get($grid-width-values, $value);
+    }
+  }
+
+  @each $value in $offset-values {
+    .offset-#{$value} {
+      margin-left: map-get($grid-width-values, $value);
+    }
+  }
+
+  .row.reverse {
+    flex-flow: row-reverse;
+  }
+}

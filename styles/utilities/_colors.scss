@@ -1,0 +1,23 @@
+$bg-color-values: (
+  "light": $light,
+  "primary": $primary,
+  "white": $white,
+);
+
+$color-values: (
+  "gray": $gray,
+  "muted": $muted,
+  "primary": $primary,
+);
+
+@each $name, $value in $bg-color-values {
+  .bg-#{$name} {
+    background-color: $value !important;
+  }
+}
+
+@each $name, $value in $color-values {
+  .text-#{$name} {
+    color: $value !important;
+  }
+}

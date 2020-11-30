@@ -1,0 +1,69 @@
+$spacing-values: (
+  0: 0,
+  1: 0.25rem,
+  2: 0.5rem,
+  3: 1rem,
+  4: 2rem,
+  5: 3rem,
+);
+
+$mt-values: (2, 3, 4, 5);
+$mr-values: (1, 2);
+$mb-values: (0, 3, 4, 5);
+$ml-values: (2);
+$mx-values: (3);
+
+$pl-values: (4);
+$px-values: (0);
+$py-values: (3, 4, 5);
+
+@each $value in $mt-values {
+  .mt-#{$value} {
+    margin-top: map-get($spacing-values, $value);
+  }
+}
+
+@each $value in $mr-values {
+  .mr-#{$value} {
+    margin-right: map-get($spacing-values, $value);
+  }
+}
+
+@each $value in $mb-values {
+  .mb-#{$value} {
+    margin-bottom: map-get($spacing-values, $value);
+  }
+}
+
+@each $value in $ml-values {
+  .ml-#{$value} {
+    margin-left: map-get($spacing-values, $value);
+  }
+}
+
+@each $value in $mx-values {
+  .mx-#{$value} {
+    margin-right: map-get($spacing-values, $value);
+    margin-left: map-get($spacing-values, $value);
+  }
+}
+
+@each $value in $pl-values {
+  .pl-#{$value} {
+    padding-left: map-get($spacing-values, $value);
+  }
+}
+
+@each $value in $px-values {
+  .px-#{$value} {
+    padding-right: map-get($spacing-values, $value);
+    padding-left: map-get($spacing-values, $value);
+  }
+}
+
+@each $value in $py-values {
+  .py-#{$value} {
+    padding-top: map-get($spacing-values, $value);
+    padding-bottom: map-get($spacing-values, $value);
+  }
+}

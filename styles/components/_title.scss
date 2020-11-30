@@ -1,0 +1,17 @@
+.listtitle,
+.navtitle {
+  color: $muted;
+  font-size: $font-size-xs;
+  font-weight: $font-weight-bold;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.listtitle {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+}
+
+.navtitle {
+  padding: 0.5rem 1rem;
+}

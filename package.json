@@ -1,15 +1,23 @@
 {
-  "name": "interrogo-nextjs",
+  "name": "tiqa-next",
   "version": "0.1.0",
-  "private": true,
+  "license": "CC BY 4.0",
+  "author": "Tiqa",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
+    "build": "next build && next export",
+    "start": "next start",
+    "analyze": "cross-env ANALYZE=true yarn build"
   },
   "dependencies": {
+    "@next/bundle-analyzer": "^10.0.2",
+    "@sentry/browser": "^5.27.6",
+    "clsx": "^1.1.1",
+    "cross-env": "^7.0.2",
     "next": "10.0.0",
     "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "react-dom": "17.0.1",
+    "sass": "^1.29.0",
+    "workbox-webpack-plugin": "^5.1.4"
   }
 }

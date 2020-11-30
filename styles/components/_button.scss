@@ -1,0 +1,74 @@
+$button-font-weight: $font-weight-bold;
+$button-theme-colors: (
+  "primary": $primary,
+);
+
+@mixin button-variant(
+  $background,
+  $border: $background,
+  $color: color-contrast($background),
+  $hover-background: shade-color($background, 15%),
+  $hover-border: $hover-background,
+  $hover-color: $color,
+  $active-background: shade-color($background, 20%),
+  $active-border: $active-background,
+  $active-color: $color
+) {
+  color: $color;
+  background-color: $background;
+  border-color: $border;
+
+  &:hover {
+    color: $hover-color;
+    background-color: $hover-background;
+    border-color: $hover-border;
+  }
+
+  &:focus {
+    color: $hover-color;
+    background-color: $hover-background;
+    border-color: $hover-border;
+  }
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  font-weight: $button-font-weight;
+  line-height: 1.5;
+  color: $dark;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 0.75rem 2rem;
+  font-size: $font-size;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out;
+
+  &:focus {
+    outline: 0;
+  }
+
+  &.btn-block {
+    display: block;
+    width: 100%;
+  }
+
+  &.link {
+    color: $primary;
+    font-weight: initial;
+  }
+
+  @each $color, $value in $button-theme-colors {
+    &.#{$color} {
+      @include button-variant($value);
+    }
+  }
+}
+
+.btn-sm {
+  font-size: $font-size-sm;
+}

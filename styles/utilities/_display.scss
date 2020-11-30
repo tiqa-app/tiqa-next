@@ -1,0 +1,7 @@
+$display-values: ("block", "flex", "none");
+
+@each $value in $display-values {
+  .d-#{$value} {
+    display: #{$value} !important;
+  }
+}

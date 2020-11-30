@@ -1,0 +1,18 @@
+$card-color: $dark;
+$card-border-color: $border-color;
+$card-hover-border-color: $primary;
+
+.card {
+  display: flex;
+  position: relative;
+  color: $card-color;
+  border: solid 1px $card-border-color;
+}
+
+a.card:hover {
+  border-color: $card-hover-border-color;
+}
+
+.card-body {
+  padding: 1.5rem;
+}

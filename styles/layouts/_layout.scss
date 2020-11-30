@@ -1,0 +1,29 @@
+.layout {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: relative;
+  -webkit-overflow-scrolling: touch;
+}
+
+.content {
+  position: relative;
+  display: inline-block;
+  overflow-y: auto;
+  overflow-x: hidden;
+  flex-grow: 1;
+  z-index: 1;
+}
+
+@media screen and (min-width: $lg) {
+  .content {
+    margin-left: $sidebar-width;
+  }
+
+  .layout-backdrop {
+    visibility: hidden !important;
+  }
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "image": "/img/topics/angular.svg",
+    "slug": "angular",
+    "label": "Angular"
+  }, {
+    "image": "/img/topics/javascript.svg",
+    "slug": "javascript",
+    "label": "JavaScript"
+  }, {
+    "image": "/img/topics/react.svg",
+    "slug": "react",
+    "label": "React",
+    "inprogress": true
+  }, {
+    "image": "/img/topics/redux.svg",
+    "slug": "redux",
+    "label": "Redux",
+    "inprogress": true
+  }, {
+    "image": "/img/topics/vue.svg",
+    "slug": "vue",
+    "label": "Vue",
+    "inprogress": true
+  }
+]

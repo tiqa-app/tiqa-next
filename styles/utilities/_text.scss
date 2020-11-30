@@ -1,0 +1,16 @@
+.bold {
+  font-weight: $font-weight-bold;
+}
+
+small,
+.small {
+  font-size: $font-size-sm;
+}
+
+.smaller {
+  font-size: $font-size-xs;
+}
+
+.text-center {
+  text-align: center;
+}

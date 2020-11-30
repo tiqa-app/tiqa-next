@@ -1,0 +1,22 @@
+.header-tabs {
+  justify-content: center;
+  margin: 0 -0.75rem;
+}
+
+.header-title {
+  font-size: 1.125rem;
+}
+
+@media screen and (min-width: $lg) {
+  .menu-icon {
+    display: none !important;
+  }
+
+  .header-tabs {
+    justify-content: flex-start;
+  }
+
+  .header-title {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,15 @@
+$border-values: ("border-bottom", "border-top");
+
+@each $value in $border-values {
+  .#{$value} {
+    #{$value}: solid 1px $border-color !important;
+  }
+}
+
+.border-0 {
+  border: none !important;
+}
+
+.rounded {
+  border-radius: 0.75rem;
+}

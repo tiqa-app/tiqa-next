@@ -1,0 +1,30 @@
+$align-items-values: (
+  "center": center,
+);
+
+$flex-column-values: (
+  "column": column,
+);
+
+$justify-content-values: (
+  "between": space-between,
+  "center": center,
+);
+
+@each $name, $value in $align-items-values {
+  .align-items-#{$name} {
+    align-items: $value;
+  }
+}
+
+@each $name, $value in $flex-column-values {
+  .flex-#{$name} {
+    flex-direction: $value !important;
+  }
+}
+
+@each $name, $value in $justify-content-values {
+  .justify-content-#{$name} {
+    justify-content: $value !important;
+  }
+}

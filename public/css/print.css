@@ -1,0 +1,19 @@
+html,
+body,
+#__next {
+  height: initial !important;
+}
+
+/* Hide elements */
+button,
+.list-item-extra,
+.navbar a,
+.navbar svg,
+.sidebar {
+  display: none !important;
+}
+
+/* Uncollapse elements */
+.list .d-none {
+  display: block !important;
+}
